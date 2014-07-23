@@ -1,0 +1,107 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BIB PLATZ &#124; Freie Arbeitsplätze am KIT</title>
+    <meta name="description" content="Hier findest du die aktuelle Bib-Auslastung in Karlsruhe.">
+    <meta name="keywords" content="bib, kit, bibplatz, wegweiser, freie, lernplätze, arbeitsplätze, karlsruhe, ka, uni, wiwi, fh, bibliothek, library, platz, ausblick, aktuell, momentan">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/JavaScript" src="./js/Chartjs/Chart.min.js"></script>
+    <script src="./js/modernizr-2.6.2.min.js"></script>
+    <script src="./js/jquery.simpleselect.js"></script>
+    <script type="text/JavaScript" src="./js/main.js"></script>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png" />
+    <link rel="icon" href="./img/favicon.png" type="image/png" />
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/jquery.simpleselect.css" type="text/css">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-52792333-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+  </head>
+  
+  <body>
+ <div class="wrapper">
+            <header>
+                <div class="container clearfix">
+                    <h1><a href="./index.html" class="head">BIB PLATZ</a> | <span id="demo"> </span></h1>
+                    <p>Hier findest du die momentane Bib-Auslastung in Karlsruhe</p>
+                    <script>
+                    var d = new Date();
+                    var days = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+                    var months = ["Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember"]
+                    document.getElementById("demo").innerHTML = days[d.getDay()]+", "+d.getDate()+". "+months[d.getMonth()]+" "+d.getFullYear();
+                    </script>
+                </div>
+            </header>
+            <div class="container clearfix">
+                <div class="third widget doughnut">
+                    <h3>Auslastung</h3>
+                    
+                    <div class="canvas-container">
+                      
+                        <canvas id="canvas" height="450" width="450"></canvas>
+                        
+                    </div>
+                    <div class="chart-legend">
+                    <p class="ship"> Auslastung in Prozent</p>
+                   </div>
+                </div>
+                <div class="third widget doughnut">
+                    <div class="chart-legend">
+                        <h3>Entwicklung</h3>
+                    </div>
+                    <div class="canvas-container">
+                      <div id="chart_div" style="width: 100%; height: auto;"></div>
+                      
+                     
+                         <select id="load" />
+                             <option value="LBS" >KIT-EG/1.OG-Alt</option>
+                             <option value="LSW" selected>KIT-1.OG-Neu</option>
+                             <option value="LSN" >KIT-2.OG-Alt</option>
+                              <option value="LST">KIT-2.OG-Neu</option>
+                              <option value="LSG">KIT-3.OG</option>
+                              <option value="FBI">Info-Bib</option> 
+                              <option value="FBP" >Physik-Bib</option>   
+                              <option value="FBC" >Chemie-Bib</option>
+                              <option value="FBW" >Wiwi-Bib</option>
+                              <option value="FBM" >Mathe-Bib</option>
+                             <option value="FBA" >Architektur Bib</option>
+                             <option value="BIB-N" >KIT-Bib Nord</option>
+                             <option value="FBH" >FH-Bib</option>
+                             <option value="TheaBib" >TheaBib</option> 
+                             <option value="LAF" >Lernzentrum</option> 
+                        </select>
+                      
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="push"></div>
+          </div>
+        
+            <footer>
+            <div class="container">
+                message <a href="mailto:tim.eck@web.de" class="crazy">Tim</a>
+                or get the <a href="./info.html" class="crazy">answer</a> you're looking for
+            </div>
+        </footer>
+
+   
+</body>
+
+</div>
+</html>
