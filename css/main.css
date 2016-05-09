@@ -106,12 +106,15 @@ body {
 /* STICKY FOOTER */
 .wrapper {
     min-height: 100%;
+    /*background-image: url(http://static.panoramio.com/photos/original/33998994.jpg);
+    background-repeat:no-repeat;
+    background-size:cover; */
     height: auto !important;
     height: 100%;
-    margin: 0 auto -40px; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -40px; /* 0 auto -40px;  the bottom margin is the negative value of the footer's height */
 }
 footer {
-    padding: 10px;
+    /*padding: auto;*/
     background: #dbba34;
     color: #fff;
     font-weight: 200;
@@ -170,8 +173,8 @@ header .button {
     margin: 0 auto;
 }
 .canvas-container {
-    min-height: 421px;
-    max-height: 600px;
+    min-height: auto;
+    max-height: auto;
     position: relative;
 }
 .widget {
@@ -180,6 +183,7 @@ header .button {
     background: #efefef;
     padding: 12px;
     margin-bottom: 25px;
+    opacity: 10%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -201,8 +205,8 @@ header .button {
 
 /* Doughnut-specific */
 .widget.doughnut .canvas-container {
-    min-height: 250px;
-    max-height: 550px;
+    min-height: auto;
+    max-height: auto;
 }
 .widget.doughnut .status {
     display: block;
@@ -225,6 +229,7 @@ header .button {
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: center;
+
 }
 /* Line-specific */
 .widget.line p span {
