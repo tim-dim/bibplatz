@@ -14,7 +14,7 @@ google.load("visualization", "1", {packages:["corechart", "treemap"]});
         });
 
         google.setOnLoadCallback(createOveriew());
-        google.setOnLoadCallback(createGraph(36,"LSW"));
+        google.setOnLoadCallback(createGraph(36,"LBS"));
 
       });
 
@@ -80,7 +80,7 @@ google.load("visualization", "1", {packages:["corechart", "treemap"]});
        function drawRadar(data) {
 
             var radarChartData = {
-    labels: ["KIT-EG/1.OG-Alt", "KIT-1.OG-Neu", "KIT-2.OG-Alt","KIT-2.OG-Neu","KIT-3.OG","Info-Bib", "Physik-Bib", "FH-Bib"],
+    labels: ["KIT-EG/1.OG-Alt", "KIT-1.OG-Neu", "KIT-2.OG-Alt","KIT-2.OG-Neu","KIT-3.OG"],
     datasets: [
       {
         label: "My First dataset",
@@ -90,7 +90,7 @@ google.load("visualization", "1", {packages:["corechart", "treemap"]});
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [data.getValue(5,3),data.getValue(3,3),data.getValue(4,3),data.getValue(2,3),data.getValue(1,3),data.getValue(7,3),data.getValue(6,3), data.getValue(10,3)]
+        data: [data.getValue(5,3),data.getValue(3,3),data.getValue(4,3),data.getValue(2,3),data.getValue(1,3)]
       }
       
     ]
